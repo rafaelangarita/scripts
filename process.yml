@@ -1,0 +1,16 @@
+apps:
+  - script: socialbus-bc/bus-email/start-bc.js
+    watch: true
+    name: bus-email
+  - script: socialbus-bc/bus-http/http-sender/start-bc.js
+    watch: true
+    name: bus-http
+  - script: socialbus-bc/appcivistnotifier-bus.email/http-endpoint/start-bc.js
+    watch: true
+    name: appcivist-bus
+  - script: socialbus-bc/bus-subscriptionmanager/http-receiver/start-bc.js
+    watch: true
+    name: bus-subscriptions-manager
+  - script: appcivist-notification-service/server.js
+    watch: true
+    name: subscription-manager
