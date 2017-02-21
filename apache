@@ -1,0 +1,10 @@
+//rewrite rules in '.htacess' to deal with application in subfolders
+//This example works for the subfolder 'appcivistpb' and excludes the subfolder 'test'
+
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/test($|/)
+RewriteRule ^(?!appcivistpb/).+ appcivistpb/$0 [L,NC]
+
+
