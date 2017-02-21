@@ -7,4 +7,16 @@ RewriteBase /
 RewriteCond %{REQUEST_URI} !^/test($|/)
 RewriteRule ^(?!appcivistpb/).+ appcivistpb/$0 [L,NC]
 
+//Use an alias for the subfolder:
+
+Alias /appcivistpb /srv/apache2/htdocs/appcivistpb
+<Directory /srv/apache2/htdocs/appcivistpb>
+      Order allow,deny
+      Allow from all
+      Options All
+      AllowOverride All
+      Require all granted
+</Directory>
+
+
 
