@@ -4,6 +4,7 @@
 Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
+RewriteCond %{REQUEST_URI} !^/
 RewriteCond %{REQUEST_URI} !^/test($|/)
 RewriteRule ^(?!appcivistpb/).+ appcivistpb/$0 [L,NC]
 
